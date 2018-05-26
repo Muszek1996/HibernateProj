@@ -12,8 +12,6 @@
         <mapping class="hibernate.Entities.GameEntity"/>
         <mapping resource="PlayerEntity.hbm.xml"/>
         <mapping class="hibernate.Entities.PlayerEntity"/>
-        <mapping resource="PlayersgamesEntity.hbm.xml"/>
-        <mapping class="hibernate.Entities.PlayersgamesEntity"/>
 
 
 

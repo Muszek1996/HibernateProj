@@ -1,15 +1,35 @@
 package hibernate.Entities;
 
+import java.util.*;
+
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
-@Table(name = "player", schema = "steam", catalog = "")
+@Table(name = "player", schema = "steam")
 public class PlayerEntity {
     private long steamid;
     private String nickname;
     private byte vacBanned;
     private double accountValue;
+
+    public PlayerEntity(){
+        this.games = new TreeSet<GameEntity>();
+    }
+
+    @ManyToMany(cascade = {CascadeType.MERGE,CascadeType.PERSIST})
+    @JoinTable(name = "playersgames",
+            joinColumns = @JoinColumn(name = "steamid"),
+            inverseJoinColumns = @JoinColumn(name = "appid")
+    )
+    private Set<GameEntity> games;
+
+    public Set<GameEntity> getGames() {
+        return games;
+    }
+
+    public void setGames(Set<GameEntity> games) {
+        this.games = games;
+    }
 
     @Id
     @Column(name = "steamid", nullable = false)
@@ -75,6 +95,7 @@ public class PlayerEntity {
                 ", nickname='" + nickname + '\'' +
                 ", vacBanned=" + vacBanned +
                 ", accountValue=" + accountValue +
+                ", games=" + games +
                 '}';
     }
 }

@@ -1,15 +1,34 @@
 package hibernate.Entities;
 
+import java.util.*;
+
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
-@Table(name = "game", schema = "steam", catalog = "")
+@Table(name = "game", schema = "steam")
 public class GameEntity {
     private long appid;
     private String name;
     private double price;
     private byte gamepadSupport;
+
+    public GameEntity(){
+        this.players = new HashSet<PlayerEntity>();
+    }
+
+
+    @ManyToMany(mappedBy = "games", cascade = {CascadeType.ALL})
+    private Set<PlayerEntity> players;
+
+
+    public Set<PlayerEntity> getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(Set<PlayerEntity> players) {
+        this.players = players;
+    }
+
 
     @Id
     @Column(name = "appid", nullable = false)
@@ -75,6 +94,7 @@ public class GameEntity {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", gamepadSupport=" + gamepadSupport +
+                ", players=" + players +
                 '}';
     }
 }
