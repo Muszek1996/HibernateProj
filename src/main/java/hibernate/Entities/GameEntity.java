@@ -1,4 +1,4 @@
-package hibernate;
+package hibernate.Entities;
 
 import javax.persistence.*;
 import java.util.Objects;

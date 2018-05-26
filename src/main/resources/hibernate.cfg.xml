@@ -7,13 +7,13 @@
         <property name="connection.url">jdbc:mysql://localhost:56307/steam</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.username">root</property>
-        <property name="hibernate.connection.password">K0nr4f4l</property>
+        <property name="connection.password">K0nr4f4l</property>
         <mapping resource="GameEntity.hbm.xml"/>
-        <mapping class="hibernate.GameEntity"/>
+        <mapping class="hibernate.Entities.GameEntity"/>
         <mapping resource="PlayerEntity.hbm.xml"/>
-        <mapping class="hibernate.PlayerEntity"/>
+        <mapping class="hibernate.Entities.PlayerEntity"/>
         <mapping resource="PlayersgamesEntity.hbm.xml"/>
-        <mapping class="hibernate.PlayersgamesEntity"/>
+        <mapping class="hibernate.Entities.PlayersgamesEntity"/>
 
 
 
