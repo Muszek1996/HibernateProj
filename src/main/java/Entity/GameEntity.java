@@ -1,4 +1,4 @@
-package hibernate.Entities;
+package Entity;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package hibernate.Entities;
+package Entity;
 
 import java.util.*;
 
@@ -11,6 +11,13 @@ public class PlayerEntity {
     private String nickname;
     private byte vacBanned;
     private double accountValue;
+
+    public PlayerEntity(long steamid, String nickname, byte vacBanned, double accountValue) {
+        this.steamid = steamid;
+        this.nickname = nickname;
+        this.vacBanned = vacBanned;
+        this.accountValue = accountValue;
+    }
 
     public PlayerEntity(){
         this.games = new TreeSet<GameEntity>();

@@ -9,9 +9,9 @@
         <property name="connection.username">root</property>
         <property name="connection.password">K0nr4f4l</property>
         <mapping resource="GameEntity.hbm.xml"/>
-        <mapping class="hibernate.Entities.GameEntity"/>
+        <mapping class="Entity.GameEntity"/>
         <mapping resource="PlayerEntity.hbm.xml"/>
-        <mapping class="hibernate.Entities.PlayerEntity"/>
+        <mapping class="Entity.PlayerEntity"/>
 
 
 

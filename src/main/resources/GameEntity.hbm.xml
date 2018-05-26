@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="hibernate.Entities.GameEntity" table="game" schema="steam">
+    <class name="Entity.GameEntity" table="game" schema="steam">
         <id name="appid">
             <column name="appid" sql-type="bigint(20)"/>
         </id>

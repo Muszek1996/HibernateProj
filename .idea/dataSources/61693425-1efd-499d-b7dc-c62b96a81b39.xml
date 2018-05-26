@@ -982,28 +982,22 @@
       <ColNames>steamid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="245" parent="234" name="id">
+    <column id="245" parent="234" name="steamid">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="234" name="steamid">
+    <column id="246" parent="234" name="appid">
       <Position>2</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="234" name="appid">
-      <Position>3</Position>
-      <DataType>bigint(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="248" parent="234" name="PRIMARY">
+    <key id="247" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>steamid
+appid</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>
